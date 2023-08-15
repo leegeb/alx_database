@@ -1,6 +1,12 @@
-/*File: 0-list_databases.sql
-Description: The SQL script lists all the databases from my server*/
+-- File: 0-list_databases.sql
+-- Description: The SQL script lists all the databases from my server
 
-/*This script lists all databases of my MySQL server*/
+-- This script lists all databases of my MySQL server.
+
+-- Display a message to indicate the beginning of the script.
+SELECT 'Enter password:' AS Message;
+
+-- Use the SHOW DATABASES statement to list databases.
+-- The SHOW DATABASES statement returns a list of all databases on the server.
 SHOW DATABASES;
 
