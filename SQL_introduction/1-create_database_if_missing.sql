@@ -1,11 +1,12 @@
 -- File: 1-create_database_if_missing.sql
--- Description: This script creates the database hbtn_0c_0 if it doesn't already exist
+
+-- This script creates the database hbtn_0c_0 if it doesn't already exist.
+
+-- Disable output
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_ENGINE_SUBSTITUTION';
 
 -- Try to create the database hbtn_0c_0 if it doesn't exist.
-CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
--- Display a message indicating the outcome.
-SELECT CASE WHEN DATABASE() = 'hbtn_0c_0' THEN
-        'Database hbtn_0c_0 has been created or already exists.'
-    ELSE
-        'Failed to create or check database hbtn_0c_0.'
-    END AS Message;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `hbtn_0c_0`;
+
+-- Restore output
+SET SQL_MODE=@OLD_SQL_MODE;
